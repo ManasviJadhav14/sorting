@@ -1,0 +1,34 @@
+<html>
+      <head> 
+            <title>Sort My Name app by  Manasvi</title>
+            <style>
+                   *{font-size:40px;font family:Calibri;}
+                    body{background-color:azure;}
+            </style>
+      </head>
+      <body>
+            <center>
+                    <h1>Sort My Name app by Manasvi<h1>
+                    <form onsubmit="show()">
+                        <input type="text"id="name"placeholder="enter your name"/>
+                        <br/><br/>
+                        <input type="submit"/>
+                    </form>
+                         <h2 id="msg"/>
+                    <script>
+                         function show()
+                         {
+                              event.preventDefault();
+                              let name=document.getElementById("name");
+                              let msg=document.getElementById("msg");
+
+                              let n=name.value;
+                              let r1=n.split("");
+                              r1.sort();
+                              let nn=r1.join("");
+                              msg.innerHTML=nn;
+                          }
+                     </script>
+             </center>
+        </body>
+</html>
